@@ -53,6 +53,12 @@ class CheckoutTest extends FunSuite{
     assert(price == 130.0F)
   }
 
+  test("Total price should be zero when list of items is empty "){
+    val totalPrice = Checkout.total(Nil,Nil);
+    assert(totalPrice == 0F)
+  }
+
+
   test("test checkout when no discount rule matches, total price should be total price of the product into times added "){
     val itemA:Item = new Item("A",30.0F)
     val itemB:Item = new Item("B",50.0F)
