@@ -32,8 +32,6 @@ sbt test
  Java       1.6
  Scala      2.10.0
  Scalatest  scalatest_2.10 2.0
- Graph Core 1.6.1
- Maven      3.0.4
  Scala IDE IntelliJ
 
 
