@@ -125,9 +125,9 @@ object Checkout {
 
   /**
    * Finds the matching rule for a given item from the list of rules
-   * @param item
-   * @param rules
-   * @return
+   * @param item : A List of tuple containing item and count of items
+   * @param rules : List of rules
+   * @return : Returns an option of Some Rule if rule is found else return None
    */
   def matchingRule(item:(Item, Int), rules : List[Rule]) : Option[Rule] =  rules.find(x => x.matches(item._1, item._2))
 
