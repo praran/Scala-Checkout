@@ -91,7 +91,8 @@ object Checkout {
   }
 
   /**
-   * A function which sums the price of items, technique is similar to reduce
+   * A function which sums the price of items
+   * technique is similar to reduce function in map-reduce algorithm
    * @param function : a binary function used for accumulation
    * @param neutral  : a neutral element used for the base case
    * @param items    : List cf Tuple containing Item and correct price
@@ -106,7 +107,8 @@ object Checkout {
 
   /**
    * Map the correct price if any discount rule applied else the total price of the products
-   * technique similar to map
+   * technique similar to mapping function in map-reduce algorithm
+   * Using tail recursion for efficiency
    * @param items
    * @param rules
    * @return

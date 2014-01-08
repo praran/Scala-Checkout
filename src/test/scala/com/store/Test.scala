@@ -21,7 +21,7 @@ class CheckoutTest extends FunSuite{
     assert(item1.equals(item2))
   }
 
-  test("Rule with different item should not match"){
+  test("Rule with different item sku should not match"){
     // Init
     val item1:Item = new Item("A",32.0F)
     val item2:Item = new Item("B",32.0F)
@@ -75,6 +75,15 @@ class CheckoutTest extends FunSuite{
     assert(totalPrice == 0F)
   }
 
+  test("Total price of items should be the total price of products, when discount rules are not present"){
+    // Init
+    val item = new Item("A",10.0F)
+    val items = item :: item :: item :: Nil
+    // SUT
+    val totalPrice = Checkout.total(items,Nil)
+    // Assert
+    assert(totalPrice == 30.0F)
+  }
 
   test("test checkout when no discount rule matches, total price should be total price of the product into times added "){
     // Init

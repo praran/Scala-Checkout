@@ -11,8 +11,22 @@ Solution Approach   :
   Checkout is defined as a scala object, which provides a singleton implementation of Checkout with functions
   
   The map and reduce functions which in this case mapCorrectPrice and cumulativePrice uses tail-recursion for efficiency
+  
+  Note : More sophisticated implementation is also possible, but for the given use case the implementation appears to be the most simple and efficent.
+         Also in some places Scala's predefined library could be used for ex: foldL in mapCorrectPrice and cumulativePrice functions but I have chosen 
+		 to use a custom implementation
 
+Build project :
+---------------
 
+sbt clean
+sbt compile
+
+Run Tests :
+-----------
+
+sbt test
+  
  RuntimeEnvironment :
  --------------------
  Java       1.6
